@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../global.service';
 import { ModalController } from '@ionic/angular';
+import { SettingsModalComponent } from '../settings-modal/settings-modal.component';
 
 @Component({
   selector: 'app-letters',
@@ -14,5 +15,12 @@ export class LettersPage implements OnInit {
 
   ngOnInit() {
   }
+  async presentModal() {
+    const modal:HTMLIonModalElement = await this.modalController.create({
+      component: SettingsModalComponent
+    });
+    
+    await modal.present();
+  } 
 
 }

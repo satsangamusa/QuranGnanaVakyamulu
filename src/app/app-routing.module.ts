@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'mundhumaata',
+    redirectTo: 'home',
     pathMatch: 'full'
   }, 
   {
@@ -28,10 +28,7 @@ const routes: Routes = [
   {
     path: 'content-details',
     loadChildren: () => import('./content-details/content-details.module').then( m => m.ContentDetailsPageModule)
-  },   {
-    path: 'mundhumaata',
-    loadChildren: () => import('./mundhumaata/mundhumaata.module').then( m => m.MundhumaataPageModule)
-  },
+  },   
   {
     path: 'letters',
     loadChildren: () => import('./letters/letters.module').then( m => m.LettersPageModule)
